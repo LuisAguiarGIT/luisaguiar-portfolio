@@ -1,6 +1,7 @@
 import Button from '@/components/Button';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { motion } from 'motion/react';
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -48,7 +49,11 @@ export default function Navbar() {
       </nav>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden glass-strong"
+        >
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link, i) => (
               <a
@@ -61,7 +66,7 @@ export default function Navbar() {
             ))}
             <Button>Contact me</Button>
           </div>
-        </div>
+        </motion.div>
       )}
     </header>
   );
