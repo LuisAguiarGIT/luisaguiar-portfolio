@@ -16,16 +16,28 @@ export default function CodeEditor() {
 
   return (
     <div className="w-1/2 pt-64">
-      <div className="bg-[#141B24]">
-        <div className="bg-[#282C34] w-1/3 text-sm text-center p-1 text-[#A1A2A7]">
-          {current.filename}
+      <div className="bg-[#141B24] p-1.5 rounded-t-md border-b-2 border-[#243041]">
+        <div className="flex justify-between">
+          <div className="flex gap-1.5 items-center pl-4">
+            <div className="w-3 h-3 rounded-full bg-red-500/80" />
+            <div className="w-3 h-3 rounded-full bg-amber-300/80" />
+            <div className="w-3 h-3 rounded-full bg-green-600/80" />
+          </div>
+          <div className="w-1/4 text-xs text-center p-1 text-[#A1A2A7]/80">
+            {current.filename}
+          </div>
         </div>
       </div>
       <SyntaxHighlighter
         language={current.language}
         style={oneDark}
         showLineNumbers
-        customStyle={{ margin: 0, height: '300px', overflow: 'hidden' }}
+        customStyle={{
+          margin: 0,
+          height: '300px',
+          overflow: 'hidden',
+          borderRadius: '0 0 6px 6px',
+        }}
       >
         {current.code}
       </SyntaxHighlighter>
