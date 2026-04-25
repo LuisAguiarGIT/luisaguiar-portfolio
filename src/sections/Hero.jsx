@@ -1,3 +1,5 @@
+import CodeEditor from '@/components/CodeEditor';
+
 export default function Hero() {
-  return <section></section>;
+  return <section>{/* <CodeEditor /> */}</section>;
 }
