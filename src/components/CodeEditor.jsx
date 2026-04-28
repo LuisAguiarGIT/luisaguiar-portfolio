@@ -15,7 +15,7 @@ export default function CodeEditor() {
   }, []);
 
   return (
-    <div className="w-1/2 pt-64">
+    <div className="w-full object-cover">
       <div className="bg-[#141B24] p-1.5 rounded-t-md border-b-2 border-[#243041]">
         <div className="flex justify-between">
           <div className="flex gap-1.5 items-center pl-4">
@@ -37,6 +37,8 @@ export default function CodeEditor() {
           height: '300px',
           overflow: 'hidden',
           borderRadius: '0 0 6px 6px',
+          opacity: '0.5',
+          transition: 'all 200ms',
         }}
       >
         {current.code}
