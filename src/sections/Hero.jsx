@@ -187,9 +187,10 @@ export default function Hero() {
           </p>
           <div className="relative overflow-hidden">
             <motion.div
-              animate={{ x: [0, -1400] }}
+              animate={{ x: ['0%', '-50%'] }}
               transition={{
                 x: {
+                  duration: 30,
                   ease: 'linear',
                   repeat: Infinity,
                   repeatType: 'loop',
