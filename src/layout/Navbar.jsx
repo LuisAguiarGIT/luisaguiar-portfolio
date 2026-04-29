@@ -50,7 +50,9 @@ export default function Navbar() {
         </div>
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact me</Button>
+          <a href="#contact">
+            <Button size="sm">Contact me</Button>
+          </a>
         </div>
         {/* Mobile Menu Button */}
         <button
@@ -78,9 +80,11 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact me
-            </Button>
+            <a href="#contact">
+              <Button onClick={() => setIsMobileMenuOpen(false)}>
+                Contact me
+              </Button>
+            </a>
           </div>
         </motion.div>
       )}

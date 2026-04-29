@@ -45,7 +45,7 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;I’m Luís Aguiar, a software engineer
+                &nbsp;&nbsp;&nbsp;&nbsp;I’m Luís Aguiar, a computer engineer
                 experienced in building reliable, high-performance applications
                 across both legacy and modern stacks.
               </p>

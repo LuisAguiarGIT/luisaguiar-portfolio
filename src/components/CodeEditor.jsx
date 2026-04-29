@@ -34,8 +34,8 @@ export default function CodeEditor() {
         showLineNumbers
         customStyle={{
           margin: 0,
-          height: '300px',
-          overflow: 'hidden',
+          height: '450px',
+          overflowY: 'hidden',
           borderRadius: '0 0 6px 6px',
           opacity: '0.5',
           transition: 'all 200ms',

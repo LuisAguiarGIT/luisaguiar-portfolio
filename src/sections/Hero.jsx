@@ -81,7 +81,7 @@ export default function Hero() {
             <motion.div variants={item}>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer ● FullStack Developer
+                Computer Engineer ● FullStack Developer
               </span>
             </motion.div>
             {/* Headline */}
@@ -100,16 +100,18 @@ export default function Hero() {
                 variants={item}
                 className="text-lg text-muted-foreground max-w-lg"
               >
-                Hi, I'm Luís Aguiar, a Software Engineer specializing in .NET
+                Hi, I'm Luís Aguiar, a Computer Engineer specializing in .NET
                 and SQL, with experience in enterprise systems and modern
                 frontend development (React, TypeScript).
               </motion.p>
             </div>
             {/* CTAs */}
             <motion.div variants={item} className="flex flex-wrap gap-4">
-              <Button size="lg">
-                Contact me <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a href="#contact">
+                <Button size="lg">
+                  Contact me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
               <AnimatedBorderButton />
             </motion.div>
             {/* Social links */}
@@ -133,13 +135,13 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Column - Profile Image */}
+          {/* Right Column - Code Editor */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
             className="relative"
           >
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-full mx-auto">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <CodeEditor />
