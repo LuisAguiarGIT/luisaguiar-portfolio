@@ -17,7 +17,7 @@ const highlights = [
     icon: Users,
     title: 'Collaboration',
     description:
-      'Adaptable professional who works effectively both independently and in team environments. Strong sense of ownership, communication, and collaboration. Focused on delivering consistent, high-quality results.',
+      'Professional who works effectively both independently and in team environments. Strong sense of ownership, communication, and collaboration. Focused on delivering consistent, high-quality results.',
   },
   {
     icon: BookText,
@@ -40,7 +40,7 @@ export default function About() {
               Adaptable to all your requirements
               <span className="font-serif italic font-normal text-white">
                 {' '}
-                Loremm Ipsum
+                Lorem Ipsum
               </span>
             </h2>
             <div className="space-y-4 text-muted-foreground">

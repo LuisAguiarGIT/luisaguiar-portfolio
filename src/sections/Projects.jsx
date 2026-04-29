@@ -19,7 +19,7 @@ const projects = [
     tags: [
       'NextJS',
       'Prisma',
-      'Postgres SQL',
+      'PostgreSQL',
       'React',
       'Typescript',
       'Tailwind CSS',

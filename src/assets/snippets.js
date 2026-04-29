@@ -7,9 +7,10 @@ const snippets = [
   person: string;
 }
 export default function GreetUser (
-{ greeting, 
-person } : IGreetingProps
-) {
+{ 
+  greeting, 
+  person
+} : IGreetingProps) {
   const fullGreeting = \`\${greeting}, \${person}\`;
   return <h1>{fullGreeting}</h1>;
 }`,
