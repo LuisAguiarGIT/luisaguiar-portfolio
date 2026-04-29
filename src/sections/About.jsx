@@ -1,4 +1,5 @@
 import { Code2, BrainCircuit, Users, BookText } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const highlights = [
   {
@@ -32,16 +33,18 @@ export default function About() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column */}
-          <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 2 }}
+            className="space-y-8"
+          >
             <div className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
               <span>About Me</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground">
               Adaptable to all your requirements
-              <span className="font-serif italic font-normal text-white">
-                {' '}
-                Lorem Ipsum
-              </span>
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
@@ -64,7 +67,7 @@ export default function About() {
                 that delivers real value to users and clients.
               </p>
             </div>
-          </div>
+          </motion.div>
           {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6 mt-8">
             {highlights.map((item, i) => (

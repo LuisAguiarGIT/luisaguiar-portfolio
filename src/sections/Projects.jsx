@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Fitness Tracker',
     description:
-      'A fitness-focused application for tracking workouts and progress. Built to provide a simple, intuitive experience while managing routines and performance data.',
+      'A personal fitness-focused application built for tracking my workouts and progress',
     image: '/projects/fitness.png',
     tags: [
       'NextJS',

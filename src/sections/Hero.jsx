@@ -50,7 +50,7 @@ export default function Hero() {
             key={dot.id}
             className="absolute w-1.5 h-1.5 rounded-full opacity-20"
             style={{
-              backgroundColor: '#20B2A6',
+              backgroundColor: '#EAB4EC',
               left: dot.left,
               top: dot.top,
             }}
