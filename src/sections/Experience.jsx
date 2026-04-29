@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+
 const experience = [
   {
     period: '2022 - Present',
@@ -72,17 +74,19 @@ export default function Experience() {
                     <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" />
                   )}
                 </div>
-                {/* Content */}
-                <div
+                {/* Experience Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   className={`pl-8 md:pl-0 ${
                     i % 2 === 0
                       ? 'md:pr-16 md:text-right'
                       : 'md:col-start-2 md:pl-16'
                   }`}
                 >
-                  <div
-                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
-                  >
+                  <div className="glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500">
                     <span className="text-sm text-primary font-medium">
                       {exp.period}
                     </span>
@@ -104,7 +108,7 @@ export default function Experience() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             ))}
           </div>
