@@ -25,6 +25,23 @@ const experience = [
     technologies: ['Python', 'Raspberry Pi OS'],
     current: false,
   },
+  {
+    period: '2017 - 2022',
+    role: 'Bachelors in Computer Engineering',
+    company: 'Universidade da Madeira',
+    description: 'The start of my journey into programming',
+    technologies: [
+      'C++',
+      'Java',
+      'Assembly',
+      'C#',
+      'Python',
+      'Javascript',
+      'PHP',
+      'MySQL',
+    ],
+    current: false,
+  },
 ];
 
 export default function Experience() {
@@ -35,12 +52,11 @@ export default function Experience() {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-            Career Journey
+            My Journey
           </span>
           <p className="text-muted-foreground mt-6">
-            A timeline of my professional growth, from an ambitious beginner to
-            a junior engineer collabrating with teams and building products at
-            scale.
+            A timeline of my growth, from an ambitious beginner to a junior
+            engineer collabrating with teams and building products at scale.
           </p>
         </div>
         {/* Timeline */}

@@ -5,6 +5,7 @@ import Button from '@/components/Button';
 import { ArrowRight } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import AnimatedBorderButton from '@/components/AnimatedBorderButton';
+import { Marquee } from '@/components/Marquee';
 import skillsData from '@/assets/skills.json';
 
 const dots = Array.from({ length: 30 }, (_, i) => ({
@@ -175,7 +176,7 @@ export default function Hero() {
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
-            <motion.div
+            {/* <motion.div
               animate={{ x: ['0%', '-50%'] }}
               transition={{
                 x: {
@@ -194,7 +195,8 @@ export default function Hero() {
                   </span>
                 </div>
               ))}
-            </motion.div>
+            </motion.div> */}
+            <Marquee skills={skillsData.skills} speed={1} />
           </div>
         </div>
       </motion.div>
