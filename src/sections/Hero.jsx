@@ -103,19 +103,6 @@ export default function Hero() {
                 Hi, I'm Luís Aguiar, a Software Engineer specializing in .NET
                 and SQL, with experience in enterprise systems and modern
                 frontend development (React, TypeScript).
-                {/* &nbsp;&nbsp;&nbsp;&nbsp;I’m Luís Aguiar, a
-              software engineer experienced in building reliable,
-              high-performance applications across both legacy and modern
-              stacks. <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;With a strong foundation in .NET/C# and
-              Microsoft SQL Server, I’ve spent several years developing and
-              maintaining enterprise systems, including work with Dynamics CRM
-              and SSIS. Alongside this, I build modern web applications using
-              React, TypeScript, and Tailwind CSS. I’m comfortable adapting to
-              new technologies quickly and enjoy solving complex problems,
-              whether it’s improving existing systems or building new solutions
-              from the ground up. I focus on writing clean, well-documented code
-              that delivers real value to users and clients. */}
               </motion.p>
             </div>
             {/* CTAs */}

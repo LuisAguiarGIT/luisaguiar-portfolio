@@ -73,11 +73,14 @@ export default function Navbar() {
                 key={i}
                 href={link.href}
                 className="text-lg text-muted-foreground hover:text-foreground py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <Button>Contact me</Button>
+            <Button onClick={() => setIsMobileMenuOpen(false)}>
+              Contact me
+            </Button>
           </div>
         </motion.div>
       )}
