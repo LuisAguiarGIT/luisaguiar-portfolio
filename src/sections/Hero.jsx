@@ -2,7 +2,7 @@ import CodeEditor from '@/components/CodeEditor';
 import cyberpunkBg from '@/assets/cyberpunk_hero_bg.svg';
 import { motion } from 'motion/react';
 import Button from '@/components/Button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Crosshair } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import AnimatedBorderButton from '@/components/AnimatedBorderButton';
 import { Marquee } from '@/components/Marquee';
@@ -91,11 +91,18 @@ export default function Hero() {
                 variants={item}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight "
               >
-                Crafting <span className="text-primary glow-text">digital</span>
+                {/* Crafting <span className="text-primary glow-text">digital</span>
                 <br /> experiences with <br />{' '}
                 <span className="font-serif italic font-normal text-white">
                   precision.
+                </span> */}
+                <span className="flex items-baseline">
+                  Precisi
+                  <Crosshair className="text-primary h-12 w-12 hover:rotate-90 hover:scale-110 transition-all" />
+                  n
                 </span>
+                engineering with{' '}
+                <span className="text-primary glow-text">care</span>
               </motion.h1>
               <motion.p
                 variants={item}
@@ -176,26 +183,6 @@ export default function Hero() {
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
-            {/* <motion.div
-              animate={{ x: ['0%', '-50%'] }}
-              transition={{
-                x: {
-                  duration: 30,
-                  ease: 'linear',
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                },
-              }}
-              className="flex"
-            >
-              {[...skillsData.skills, ...skillsData.skills].map((skill, i) => (
-                <div key={i} className="shrink-0 px-8 py-4">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                    {skill}
-                  </span>
-                </div>
-              ))}
-            </motion.div> */}
             <Marquee skills={skillsData.skills} speed={1} />
           </div>
         </div>
