@@ -27,6 +27,22 @@ const highlights = [
   },
 ];
 
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      duration: 0.4,
+      scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const child = {
+  hidden: { opacity: 0, scale: 0 },
+  show: { opacity: 1, scale: 1 },
+};
+
 export default function About() {
   return (
     <section id="about" className="py-16 relative overflow-hidden">
@@ -37,20 +53,20 @@ export default function About() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1 }}
             className="space-y-8"
           >
             <div className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
               <span>About Me</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-highlight">
               Adaptable to all your requirements
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;I’m Luís Aguiar, a computer engineer
-                experienced in building reliable, high-performance applications
-                across both legacy and modern stacks.
+                &nbsp;&nbsp;&nbsp;&nbsp;Computer engineer experienced in
+                building reliable, high-performance applications across both
+                legacy and modern stacks.
               </p>
               <p>
                 &nbsp;&nbsp;&nbsp;&nbsp;With a strong foundation in .NET/C# and
@@ -69,9 +85,19 @@ export default function About() {
             </div>
           </motion.div>
           {/* Right Column - Highlights */}
-          <div className="grid sm:grid-cols-2 gap-6 mt-8">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="grid sm:grid-cols-2 gap-6 mt-8"
+          >
             {highlights.map((item, i) => (
-              <div key={i} className="glass p-6 rounded-2xl">
+              <motion.div
+                variants={child}
+                key={i}
+                className="glass p-6 rounded-2xl"
+              >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
@@ -79,9 +105,9 @@ export default function About() {
                 <p className="text-sm text-muted-foreground">
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

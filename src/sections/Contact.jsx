@@ -1,20 +1,30 @@
-import { Send, Mail, MapPin, CheckCircle, CircleX } from 'lucide-react';
+import {
+  Send,
+  MessageSquareReply,
+  MapPin,
+  CheckCircle,
+  CircleX,
+  Languages,
+} from 'lucide-react';
 import Button from '../components/Button';
 import { useForm, ValidationError } from '@formspree/react';
 import { motion } from 'motion/react';
 
-const contactInfo = [
+const info = [
   {
-    icon: Mail,
-    label: 'Email',
-    value: 'luis.aguiar.se@outlook.com',
-    href: 'mailto:luis.aguiar.se@outlook.com',
+    icon: MessageSquareReply,
+    label: 'Response time',
+    value: 'I typically reply within 24 hours!',
   },
   {
     icon: MapPin,
     label: 'Location',
     value: 'Madeira',
-    href: '#',
+  },
+  {
+    icon: Languages,
+    label: 'Languages',
+    value: "I'm bilingual (🇵🇹 / 🇬🇧)! And currently learning Italian",
   },
 ];
 
@@ -128,18 +138,19 @@ export default function Contact() {
             )}
           </form>
         </div>
-        {/* Contact Info */}
+        {/* Info */}
         <div className="space-y-6 animate-fade-in animation-delay-400">
           <div className="glass rounded-3xl p-8">
-            <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-xl font-semibold mb-6">
+              A little more about me
+            </h3>
             <div className="space-y-4">
-              {contactInfo.map((item, i) => (
+              {info.map((item, i) => (
                 <a
                   key={i}
-                  href={item.href}
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -160,7 +171,7 @@ export default function Contact() {
               <span className="font-medium">Currently Available</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              I'm currently open to new opportunities and exciting projects.
+              I'm always open to new opportunities and exciting projects.
               Whether you need a full-time engineer or a freelance consultant,
               let's talk!
             </p>

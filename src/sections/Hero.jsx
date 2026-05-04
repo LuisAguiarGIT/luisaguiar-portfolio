@@ -80,9 +80,10 @@ export default function Hero() {
           <div className="space-y-8">
             {/* Badge */}
             <motion.div variants={item}>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+              <span className="inline-flex items-center gap-1 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Computer Engineer ● FullStack Developer
+                Computer Engineer{' '}
+                <span className="text-highlight">● FullStack Developer</span>
               </span>
             </motion.div>
             {/* Headline */}
@@ -91,11 +92,6 @@ export default function Hero() {
                 variants={item}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight "
               >
-                {/* Crafting <span className="text-primary glow-text">digital</span>
-                <br /> experiences with <br />{' '}
-                <span className="font-serif italic font-normal text-white">
-                  precision.
-                </span> */}
                 <span className="flex items-baseline">
                   Precisi
                   <Crosshair className="text-primary h-12 w-12 hover:rotate-90 hover:scale-110 transition-all" />
@@ -167,7 +163,7 @@ export default function Hero() {
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                     <span className="text-sm font-medium">
-                      4+ years of experience
+                      4+ years of professional experience
                     </span>
                   </div>
                 </motion.div>
