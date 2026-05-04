@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
+import { motion } from 'motion/react';
 
 const projects = [
   {
@@ -17,6 +18,7 @@ const projects = [
       'A personal fitness-focused application built for tracking my workouts and progress',
     image: '/projects/fitness.png',
     tags: [
+      'Docker',
       'NextJS',
       'Prisma',
       'PostgreSQL',
@@ -28,6 +30,20 @@ const projects = [
     github: 'https://github.com/LuisAguiarGIT/myFitness',
   },
 ];
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariant = {
+  hidden: { opacity: 0, x: -80 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
 
 export default function Projects() {
   return (
@@ -44,10 +60,17 @@ export default function Projects() {
           regular work cycle.
         </p>
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid md:grid-cols-2 gap-8"
+        >
           {projects.map((project, i) => (
-            <div
+            <motion.div
               key={i}
+              variants={cardVariant}
               className="group glass rounded-2xl overflow-hidden md:row-span-1"
             >
               {/* Image */}
@@ -89,16 +112,16 @@ export default function Projects() {
                   {project.tags.map((tag, tagIdx) => (
                     <span
                       key={tagIdx}
-                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
+                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-bold border-border/50 text-primary hover:border-primary/50 hover:text-primary transition-all duration-300"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

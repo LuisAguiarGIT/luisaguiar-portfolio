@@ -19,7 +19,7 @@ const experience = [
     current: true,
   },
   {
-    period: '2021 - 2022',
+    period: 'June 2021 - September 2021',
     role: 'Research Assistant',
     company: 'M-ITI',
     description:
@@ -101,7 +101,7 @@ export default function Experience() {
                       {exp.technologies.map((tech, techIdx) => (
                         <span
                           key={techIdx}
-                          className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
+                          className="px-3 py-1 bg-surface text-xs rounded-full text-primary font-bold"
                         >
                           {tech}
                         </span>

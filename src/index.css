@@ -8,8 +8,9 @@
 
   --color-primary: #a855f7;
   --color-primary-foreground: #ffffff;
+  --color-primary-subtle: #362048;
 
-  --color-secondary: #b76dff;
+  --color-secondary: #ec4899;
   --color-secondary-foreground: #b76dff;
 
   --color-muted: #252e37;
@@ -21,6 +22,14 @@
 
   --color-highlight: #f5a623;
   --color-surface: #140b24;
+
+  --animate-rotate-border: border-rotate 3s linear infinite;
+
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
 }
 
 @layer base {
@@ -55,11 +64,22 @@
     text-shadow: 0 0 30px
       color-mix(in srgb, var(--color-primary) 50%, transparent);
   }
+
   .glow-border {
     text-shadow:
       0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent),
       inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
   }
+
+  .gradient-text {
+    @apply bg-linear-to-r from-[#A855F7] to-[#EC4899] bg-clip-text text-transparent;
+  }
+}
+
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
 }
 
 @layer utilities {
