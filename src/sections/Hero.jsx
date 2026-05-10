@@ -94,7 +94,7 @@ export default function Hero() {
               >
                 <span className="flex items-baseline">
                   Precisi
-                  <Crosshair className="text-primary h-12 w-12 hover:rotate-90 hover:scale-110 transition-all" />
+                  <Crosshair className="text-primary h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 hover:rotate-90 hover:scale-110 transition-all" />
                   n
                 </span>
                 engineering with{' '}
@@ -143,7 +143,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-            className="relative"
+            className="relative hidden lg:block"
           >
             <div className="relative max-w-full mx-auto">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />

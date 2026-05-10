@@ -64,6 +64,7 @@ export default function Contact() {
               <ValidationError
                 prefix="Name"
                 field="name"
+                required
                 errors={state.errors}
               />
               <label htmlFor="email" className="block text-sm font-medium mb-2">
@@ -93,6 +94,7 @@ export default function Contact() {
                 id="message"
                 name="message"
                 required
+                minLength={10}
                 placeholder="Your message..."
                 className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
               />
