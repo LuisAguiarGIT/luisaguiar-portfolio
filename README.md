@@ -4,7 +4,7 @@
 
 # Getting started
 
-## Run locally using
+To run locally
 
 ```bash
 npm i
