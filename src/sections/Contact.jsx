@@ -5,6 +5,7 @@ import {
   CheckCircle,
   CircleX,
   Languages,
+  Loader2,
 } from 'lucide-react';
 import Button from '../components/Button';
 import { useForm, ValidationError } from '@formspree/react';
@@ -110,7 +111,15 @@ export default function Contact() {
               size="lg"
               disabled={state.submitting}
             >
-              Send Message <Send />
+              {state.submitting ? (
+                <>
+                  <Loader2 className="w-5 h-5 animate-spin" /> Sending...
+                </>
+              ) : (
+                <>
+                  Send Message <Send className="w-5 h-5" />
+                </>
+              )}
             </Button>
 
             {state.succeeded && (
