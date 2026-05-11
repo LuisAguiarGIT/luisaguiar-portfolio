@@ -8,7 +8,7 @@ const projects = [
     description:
       'A responsive personal portfolio built to showcase my work, skills, and approach. Designed with a focus on clean UI, performance, and clear structure.',
     image: '/projects/portfolio.png',
-    tags: ['React', 'Javascript', 'Tailwind CSS', 'Vite'],
+    tags: ['React', 'Javascript', 'Tailwind CSS', 'Vite', 'Github Actions'],
     link: '#',
     github: 'https://github.com/LuisAguiarGIT/luisaguiar-portfolio',
   },
