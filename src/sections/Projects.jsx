@@ -7,7 +7,7 @@ const projects = [
     title: 'Portfolio',
     description:
       'A responsive personal portfolio built to showcase my work, skills, and approach. Designed with a focus on clean UI, performance, and clear structure.',
-    image: '/luisaguiar-portfolio/projects/portfolio.png',
+    image: '/projects/portfolio.png',
     tags: ['React', 'Javascript', 'Tailwind CSS', 'Vite'],
     link: '#',
     github: 'https://github.com/LuisAguiarGIT/luisaguiar-portfolio',
@@ -16,7 +16,7 @@ const projects = [
     title: 'Fitness Tracker',
     description:
       'A personal fitness-focused application built for tracking my workouts and progress',
-    image: '/luisaguiar-portfolio/projects/fitness.png',
+    image: '/projects/fitness.png',
     tags: [
       'Docker',
       'NextJS',
