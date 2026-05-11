@@ -1,4 +1,4 @@
-# [~/portfolio/dev](https://luisaguiargit.github.io/luisaguiar-portfolio/)
+# [~/portfolio/dev](https://luis-aguiar-dev.com/)
 
 ## 🍉 Welcome to my personal portfolio built with 🍉
 
